@@ -10,11 +10,15 @@ root.title("Billing Software...")
 text_Input = StringVar()
 operator = ""
 
+#           HEADER
+
+
 head=Frame(root,width=1600,height=100,relief=SUNKEN)
 head.pack()
 header=Label(head, text="Eat Repeat....", font=('Bodoni MT Black',30,'bold'))
 header.place(x=615, y=20)
 
+#           FRAMES
 
 f1=Frame(root,width=800,height=700,relief=SUNKEN)
 f1.pack(side=LEFT)
@@ -90,9 +94,10 @@ Division=Button(f2,padx=16,pady=16, fg="white", font=('arail',20,'bold'),text="/
 Division.grid(row=5,column=3) 
 
 
-#=========================================================
+
 #                  		BILL CALCULATIONS
-#=========================================================
+
+
 
 def Ref():
     x=random.randint(10908,500876)
@@ -167,9 +172,12 @@ def Reset():
     Sgst.set("")
     Cgst.set("")
     Cost.set("")
-#=========================================================
-#                  RESTAURANT MENU
-#=========================================================
+
+
+
+#          RESTAURANT MENU
+
+
 
 Tea=StringVar()
 Noodle=StringVar()
@@ -214,9 +222,8 @@ txtPulav=Entry(f1, font=('arial',16,'bold'),textvariable=Pulav,bd=10,insertwidth
 txtPulav.grid(row=5,column=1)
 
 
-#=========================================================
+
 #                  RESTAURANT BILL INFO
-#=========================================================
 
 lblReference= Label(f1, font=('arial', 16, 'bold'),text="Reference",bd=16,anchor="w")
 lblReference.grid(row=0, column=2)
@@ -245,9 +252,9 @@ lblTotalCost.grid(row=4, column=2)
 txtTotalCost=Entry(f1, font=('arial',16,'bold'),textvariable=Total,bd=10,insertwidth=4,bg="powder blue",justify='right')
 txtTotalCost.grid(row=4,column=3)
 
-#=========================================================
-#                  BUTTONS
-#=========================================================
+
+
+
 
 btnTotal=Button(f1,padx=16,pady=8,bd=16,fg="black",font=('arial',16,'bold'),width=10,text="Total",bg="powder blue",command=Ref).grid(row=7,column=1)
 
